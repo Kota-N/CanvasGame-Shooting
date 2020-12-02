@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooting Game</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+      }
+
+      .score {
+        position: fixed;
+        color: white;
+        margin: 20px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .start-container {
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 300px;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .start-container h1 {
+        font-weight: bold;
+        font-size: 40px;
+      }
+
+      .start-container p {
+        color: gray;
+        margin-bottom: 20px;
+      }
+
+      .start-container button {
+        border: none;
+        background-color: rgb(63, 107, 228);
+        color: white;
+        width: 80%;
+        padding: 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="score"><span>Score: </span> <span id="score">0</span></div>
+
+    <div class="start-container">
+      <h1>0</h1>
+      <p>Points</p>
+      <button>Start Game</button>
+    </div>
+    <canvas></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
